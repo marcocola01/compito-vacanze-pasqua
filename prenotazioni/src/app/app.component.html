@@ -1,0 +1,78 @@
+<div class="container">
+ <h2>Demo Form: Sku</h2>
+ <form [formGroup]="myForm"
+       (ngSubmit)="onSubmit(myForm.value)"
+       class="jumbotron">
+
+   <div class="form-group">
+     <label for="nomeInput">Nome</label>
+     <input type="text"
+           id="nomeInput"
+           placeholder="NOME"
+           name="Nome"
+           [formControl]="myForm.controls['Nome']"
+           class="form-control">
+           
+           <label for="nomeInput">Cognome</label>
+     <input type="text"
+           id="cognomeInput"
+           placeholder="COGNOME"
+           name="Cognome"
+           [formControl]="myForm.controls['Cognome']"
+           class="form-control">
+           
+           <label for="nomeInput">Indirizzo</label>
+     <input type="text"
+           id="indirizzoInput"
+           placeholder="INDIRIZZO"
+           name="Indirizzo"
+           [formControl]="myForm.controls['Indirizzo']"
+           class="form-control">
+          
+           <label for="nomeInput">Telefono</label>
+     <input type="number"
+           id="numeroInput"
+           placeholder="NUMERO"
+           name="Numero"
+           [formControl]="myForm.controls['Numero']"
+           class="form-control">
+           
+           <label for="nomeInput">Email</label>
+     <input type="text"
+           id="emailInput"
+           placeholder="EMAIL"
+           name="Email"
+           [formControl]="myForm.controls['Email']"
+           class="form-control">
+          
+           <label for="nomeInput">DataPrenotazione</label>
+     <input type="text"
+           id="nomeInput"
+           placeholder="NOME"
+           name="Nome"
+           [formControl]="myForm.controls['Nome']"
+           class="form-control">
+           
+           <label for="nomeInput">Nome</label>
+     <input type="text"
+           id="nomeInput"
+           placeholder="NOME"
+           name="Nome"
+           [formControl]="myForm.controls['Nome']"
+           class="form-control">
+   </div>
+
+   <div *ngIf="!myForm.controls['sku'].valid"
+         class="alert alert-danger">SKU is invalid
+   </div>
+   <div *ngIf="myForm.controls['sku'].hasError('required')"
+         class="alert alert-danger">SKU is required
+   </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+  
+ <div *ngIf="!myForm.valid"
+ class="alert alert-danger">Form is invalid</div>
+</div>
+
+
